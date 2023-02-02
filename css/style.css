@@ -9,23 +9,28 @@ html {
     overflow: scroll;
 }
 
-h1 {
-    font-style: oblique;
-    padding: 20px;
-}
-
-h3 {
-    margin-top: 20px;
-}
-
-section>p {
-    text-indent: 1.5em;
-}
-
 img {
     max-width: 100%;
 }
 
+aside,
+main {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 50px;
+}
+
+main {
+    max-width: calc(100% - 400px);
+    padding-bottom: 40px;
+}
+
+.contact {
+    padding-top: 20px;
+}
+
+
+/* Header */
 header {
     width: 100%;
 }
@@ -44,6 +49,7 @@ header {
     padding: 10px;
 }
 
+/* Nav */
 nav {
     position: relative;
     float: right;
@@ -71,21 +77,101 @@ nav>a.active {
     background-color: #669933;
 }
 
-aside,
-main {
-    display: inline-block;
-    vertical-align: top;
-    padding: 10px 50px;
+/* Textos */
+h1 {
+    font-style: oblique;
+    padding: 20px;
 }
 
-main {
-    max-width: calc(100% - 400px);
+h3 {
+    margin-top: 20px;
+}
+
+section>p {
+    text-indent: 1.5em;
+}
+
+section h3 {
+    padding: 10px 0;
 }
 
 section.schedule>h3 {
     font-style: oblique;
 }
 
-.contact {
+.sectiontittle {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p.under-oblique {
+    text-decoration: underline;
+    font-style: oblique;
+}
+
+/* Tablas */
+table,
+th,
+td {
+    padding: 10px;
+}
+
+th,
+td {
+    padding: 10px;
+}
+
+caption {
+    text-align: left;
+}
+
+
+/* Listas */
+
+ol,
+ul,
+dl {
+    margin-top: 10px;
+    list-style-position: inside;
+}
+
+ul {
+    list-style-type: circle;
+    padding-left: 50px;
+
+}
+
+dd {
+    text-indent: 1.5em;
+}
+
+dd li {
+    text-indent: 0;
+}
+
+ol.numbers>li {
+
     padding-top: 20px;
+}
+
+ol.numbers>li::marker {
+    font-weight: bold;
+}
+
+ol.alpha {
+    list-style-type: lower-alpha;
+}
+
+
+/* Dos Columnas */
+
+.col-left,
+.col-right {
+    display: inline-block;
+    align-content: space-between;
+}
+
+.col-right {
+    position: relative;
+    float: right;
 }
